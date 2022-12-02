@@ -15,11 +15,11 @@ public class FileReader {
                 String fileData = dataReader.nextLine();  
                 String[] array=fileData.split("\t");
                 UserLogData usrData=new UserLogData(array[0],array[1],array[2]);
-                //MapData mapObj=new MapData();
+                
                 mapObj.createMap(usrData.getName(), usrData);
-                //mapObj.display();  
+                  
             }  
-            //mapObj.display();
+           
             dataReader.close();  
         } catch (FileNotFoundException exception) {  
             System.out.println("Unexcpected error occurred!");  
